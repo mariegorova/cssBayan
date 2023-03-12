@@ -1,0 +1,75 @@
+body {
+  background-color: rgb(243, 231, 213);
+  font-family: "PT Root UI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 150%;
+}
+
+.bayan {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bayan:hover {
+  cursor: pointer;
+}
+
+.tab-title:hover {
+  cursor: pointer;
+  color: rgb(150, 123, 86);
+}
+
+input {
+    display: none;
+}
+
+.tab-content {
+    max-height: 500px;
+    transform: scaleY(0);    
+    transform-origin: top;
+    transition: transform 1s;
+}
+
+.tab {
+    max-height: 80px;
+    transition: max-height 1s;
+}
+
+.tab-title {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  background: rgb(241, 208, 158);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: rgb(84, 63, 34);
+}
+
+.tab-title::after {
+  content: "+";
+}
+
+input:checked + .tab .tab-title {
+  background: rgb(169, 106, 12);
+  color: rgb(230, 218, 202);
+}
+
+input:checked + .tab .tab-title::after {
+  content: "-";
+}
+
+input:checked + .tab .tab-content {
+    max-height: 500px;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 1s ease-in-out;
+}
+
+input:checked + .tab {
+    max-height: 600px;
+    transition: max-height 1s;
+}
