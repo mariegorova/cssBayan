@@ -16,6 +16,16 @@ img {
     margin: 0 auto;
 }
 
+.bayan:hover {
+    cursor: pointer;
+}
+
+.tab-title:hover {
+    cursor: pointer;
+    color: rgb(150, 123, 86);
+}
+
+
 .tab input,
 .tab-content {
     display: none;
@@ -47,3 +57,11 @@ img {
     background: rgb(169, 106, 12);
     color: rgb(230, 218, 202);
 }
+
+.tab :checked + .tab-title::after {
+    content: '-';
+}
+
+.tab input:checked + .tab-title + .tab-content {
+    display: block;
+} 
